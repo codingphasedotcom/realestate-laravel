@@ -6822,6 +6822,7 @@ progress {
   overflow: hidden;
   flex-shrink: 0;
   width: 100vw;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -6849,4 +6850,67 @@ progress {
   align-items: center;
   font-weight: 700px;
   margin-right: 2rem;
+}
+
+.listings-page .listings-city {
+  position: relative;
+  background: #1b1b1b;
+}
+.listings-page .listings-city__title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.listings-page .listings-city img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 0.8;
+}
+.listings-page .listings-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listings-page .listings-filter__wrapper {
+  border-radius: 5px;
+  background: white;
+  display: flex;
+  padding: 15px;
+  position: relative;
+  transform: translate(0, -50%);
+}
+.listings-page .listings-filter__option, .listings-page .listings-filter__button {
+  padding: 0 15px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #cdd1d4;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+}
+.listings-page .listings-filter__option:hover, .listings-page .listings-filter__button:hover {
+  background: #f5f6f7;
+}
+.listings-page .listings-filter__button {
+  margin-right: 0;
+  border: 1px solid #db691d;
+}
+.listings-page .listings-filter__button:hover {
+  color: white;
+  background: #db691d;
+}
+.listings-page .listings-filter .fa-caret-down {
+  margin-left: 1rem;
 }

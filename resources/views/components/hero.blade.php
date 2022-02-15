@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="hero__image">
-      <img src="https://cdn.onekindesign.com/wp-content/uploads/2017/01/Contemporary-Home-Design-Vertical-Arts-Architecture-01-1-Kindesign.jpg" class="hero__image-img">
+      <img src="https://www.thespruce.com/thmb/d4XQZTLQFE3sLSXvHbxS7pv6Cxk=/2086x1437/filters:fill(auto,1)/Modernhomeexterior-GettyImages-1058471994-014dbd8ca7894cd388ad8c4ff77bb476.jpg" class="hero__image-img">
       <div class="hero__info">
         <span class="hero__subtitle">
           Residential

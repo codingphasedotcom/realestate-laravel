@@ -1,0 +1,63 @@
+.listings-page{
+  .listings-city{
+    position: relative;
+    background: #1b1b1b;
+    &__title{
+      font-weight: 700;
+      font-size: 4rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img{
+      width:100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      opacity: .8;
+    }
+  }
+
+  .listings-filter{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    &__wrapper{
+      border-radius: 5px;
+      background: white;
+      display: flex;
+      padding: 15px;
+      position: relative;
+      transform: translate(0, -50%);
+    }
+    &__option, &__button{
+      padding: 0 15px;
+      height: 40px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid rgb(205, 209, 212);
+      margin-right: .5rem;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      font-weight: 600;
+      &:hover{
+        background:rgb(245, 246, 247);
+      }
+    }
+    &__button{
+      margin-right: 0;
+      border: 1px solid rgb(219, 105, 29);
+      &:hover{
+        color: white;
+        background: rgb(219, 105, 29);
+      }
+    }
+    .fa-caret-down{
+      margin-left: 1rem;
+    }
+  }
+}
