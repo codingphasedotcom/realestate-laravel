@@ -1,0 +1,43 @@
+.header{
+  padding: 20px 0;
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__logo{
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__menu-link{
+    padding: 20px;
+    font-weight: 600;
+    color: #191f26;
+    text-decoration: none;
+    &:hover, &--active{
+      background: #3366cc;
+      color: white;
+    }
+  }
+  &__account{
+    display: flex;
+    align-items: center;
+  }
+  &__account-link{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+    border: 1px solid #3366cc;
+    margin-right: 1.5rem;
+    color: #3366cc;
+  }
+}

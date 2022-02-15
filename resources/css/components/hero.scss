@@ -1,0 +1,77 @@
+.hero{
+  // width: 100vw;
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+  &__images{
+    display: flex;
+    max-width: 100vw;
+    height: calc(100vh - 150px);
+    transition: all .9s ease-in-out;
+    &:hover{
+      transform: translate3d(-100%,0,0);
+    }
+  }
+  &__image{
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+  }
+  &__info{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__subtitle{
+    font-size: 1rem;
+    color: white;
+  }
+  &__title{
+    font-size: 6rem;
+    width: 400px;
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+  &__info-link{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  &__image-img{
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__indicator{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    background: white;
+    display: flex;
+    padding: 2rem;
+  }
+  &__indicator-item{
+    display: flex;
+  }
+  &__indicator-number{
+    font-size: 3rem;
+    font-weight: 900px;
+    padding-right: 2rem;
+  }
+  &__indicator-text{
+    display: flex;
+    width: 60px;
+    align-items: center;
+    font-weight: 700px;
+    margin-right: 2rem;
+  }
+}

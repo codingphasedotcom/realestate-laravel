@@ -6729,3 +6729,124 @@ progress {
     display: none !important;
   }
 }
+.header {
+  padding: 20px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu-link {
+  padding: 20px;
+  font-weight: 600;
+  color: #191f26;
+  text-decoration: none;
+}
+.header__menu-link:hover, .header__menu-link--active {
+  background: #3366cc;
+  color: white;
+}
+.header__account {
+  display: flex;
+  align-items: center;
+}
+.header__account-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3366cc;
+  margin-right: 1.5rem;
+  color: #3366cc;
+}
+
+.hero {
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__images {
+  display: flex;
+  max-width: 100vw;
+  height: calc(100vh - 150px);
+  transition: all 0.9s ease-in-out;
+}
+.hero__images:hover {
+  transform: translate3d(-100%, 0, 0);
+}
+.hero__image {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+.hero__info {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero__subtitle {
+  font-size: 1rem;
+  color: white;
+}
+.hero__title {
+  font-size: 6rem;
+  width: 400px;
+  color: white;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.hero__info-link {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero__image-img {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.hero__indicator {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  background: white;
+  display: flex;
+  padding: 2rem;
+}
+.hero__indicator-item {
+  display: flex;
+}
+.hero__indicator-number {
+  font-size: 3rem;
+  font-weight: 900px;
+  padding-right: 2rem;
+}
+.hero__indicator-text {
+  display: flex;
+  width: 60px;
+  align-items: center;
+  font-weight: 700px;
+  margin-right: 2rem;
+}
