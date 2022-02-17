@@ -34,10 +34,10 @@ Route::get('/register', function () {
 });
 // User Saved Listings
 Route::get('/account/saved', function () {
-    return view('welcome');
+    return view('pages/saved-listings');
 });
 // User Showing Status
 Route::get('/account/show-status', function () {
-    return view('welcome');
+    return view('pages/show-status');
 });
 

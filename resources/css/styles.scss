@@ -3,6 +3,8 @@
 @use './base/variables';
 @use './vendors/bootstrap/scss/bootstrap.scss';
 @use './layouts/main-layout.scss';
+@use './layouts/account-layout';
 @use './components/header.scss';
 @use './components/hero.scss';
 @use './pages/listings';
+@use './pages/show-status';

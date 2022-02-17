@@ -6729,6 +6729,102 @@ progress {
     display: none !important;
   }
 }
+.account-layout .listings-city {
+  position: relative;
+  background: #1b1b1b;
+}
+.account-layout .listings-city__title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.account-layout .listings-city img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 0.8;
+}
+.account-layout .content {
+  padding: 70px 0;
+}
+.account-layout .account__menu h2 {
+  font-weight: 700;
+}
+.account-layout .account__menu a {
+  display: block;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.account-layout .listings-properties img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
+}
+.account-layout .listings-properties__item {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.account-layout .listings-properties__saved {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1b1b1b;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.account-layout .listings-properties__saved:hover, .account-layout .listings-properties__saved--active {
+  background: #f56262;
+  color: white;
+}
+.account-layout .listings-properties__item-price {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.account-layout .listings-properties__item-details {
+  font-size: 1.1rem;
+  color: #7c8791;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.account-layout .listings-properties__item-address {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.account-layout .listings-properties__item-line {
+  background: #7c8791;
+  height: 1px;
+}
+.account-layout .listings-properties__item-owner {
+  font-size: 0.9rem;
+  color: #7c8791;
+  text-align: center;
+  display: block;
+}
+
 .header {
   padding: 20px 0;
 }
@@ -6740,6 +6836,7 @@ progress {
   font-size: 2.3rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .header__menu {
   display: flex;
@@ -6770,6 +6867,7 @@ progress {
   border: 1px solid #3366cc;
   margin-right: 1.5rem;
   color: #3366cc;
+  text-decoration: none;
 }
 
 .hero {
@@ -6928,6 +7026,26 @@ progress {
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   margin-bottom: 2rem;
+  position: relative;
+}
+.listings-page .listings-properties__saved {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1b1b1b;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.listings-page .listings-properties__saved:hover, .listings-page .listings-properties__saved--active {
+  background: #f56262;
+  color: white;
 }
 .listings-page .listings-properties__item-price {
   font-size: 2rem;
@@ -6955,4 +7073,49 @@ progress {
   color: #7c8791;
   text-align: center;
   display: block;
+}
+
+.account-layout .request-list h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.account-layout .request-list__wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-layout .request-list__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.account-layout .request-list__details {
+  font-size: 1.4rem;
+  color: #7c8791;
+}
+.account-layout .request-list__info-title {
+  font-weight: 700;
+}
+.account-layout .request-list__info-status {
+  padding: 10px 15px;
+}
+.account-layout .request-list__info-status--success {
+  background: greenyellow;
+  font-weight: 700;
+}
+.account-layout .request-list__info-status--canceled {
+  background: orange;
+  font-weight: 700;
+}
+.account-layout .request-list__info-status--sold {
+  background: red;
+  color: white;
+  font-weight: 700;
 }
