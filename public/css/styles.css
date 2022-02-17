@@ -6914,3 +6914,45 @@ progress {
 .listings-page .listings-filter .fa-caret-down {
   margin-left: 1rem;
 }
+.listings-page .listings-properties img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
+}
+.listings-page .listings-properties__item {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-bottom: 2rem;
+}
+.listings-page .listings-properties__item-price {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.listings-page .listings-properties__item-details {
+  font-size: 1.1rem;
+  color: #7c8791;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.listings-page .listings-properties__item-address {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.listings-page .listings-properties__item-line {
+  background: #7c8791;
+  height: 1px;
+}
+.listings-page .listings-properties__item-owner {
+  font-size: 0.9rem;
+  color: #7c8791;
+  text-align: center;
+  display: block;
+}

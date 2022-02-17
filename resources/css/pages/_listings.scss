@@ -60,4 +60,47 @@
       margin-left: 1rem;
     }
   }
+  .listings-properties{
+    img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+    }
+    &__item{
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      margin-bottom: 2rem;
+    }
+    &__item-price{
+      font-size:2rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .5rem;
+    }
+    &__item-details{
+      font-size:1.1rem;
+      color: #7c8791;
+      display: block;
+      margin-bottom: .5rem;
+    }
+    &__item-address{
+      font-size:.9rem;
+      margin-bottom: .5rem;
+      display: block;
+    }
+    &__item-line{
+      
+      background: #7c8791;
+      height: 1px;
+    }
+    &__item-owner{
+      font-size: .9rem;
+      color: #7c8791;
+      text-align: center;
+      display: block;
+    }
+  }
 }
