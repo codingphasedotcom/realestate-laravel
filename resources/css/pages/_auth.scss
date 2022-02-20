@@ -1,0 +1,60 @@
+.auth-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: calc(100vh - 104px);
+  &__form{
+    margin-top: 200px;
+    padding: 20px;
+    width: 400px;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 15px;
+  }
+  &__title{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom:2rem;
+  }
+  &__form-group{
+    margin-bottom:1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-label{
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+  }
+  &__form-input{
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 209, 212);
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    &:hover{
+      background:rgb(245, 246, 247);
+    }
+  }
+  &__form-button{
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 0;
+    background: rgb(219, 105, 29);
+    border: 1px solid rgb(219, 105, 29);
+    color:white;
+    &:hover{
+      color: white;
+      background: rgb(219, 105, 29);
+    }
+  }
+}

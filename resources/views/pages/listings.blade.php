@@ -31,7 +31,7 @@
       <div class="row">
         @for ($i = 1; $i <= 12; $i++)
           <div class="col-sm-6 col-lg-4 col-xl-3">
-            <div class="listings-properties__item">
+            <a href="/listing/2123-grand-ave-miami-fl-33456/1" class="listings-properties__item">
               <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
               <div class="listings-properties__saved ">
                 <i class="fa-solid fa-heart"></i>
@@ -47,7 +47,7 @@
               <span class="listings-properties__item-owner">
                 Bryant Realty
               </span>
-            </div>
+            </a>
           </div>
         @endfor
         
