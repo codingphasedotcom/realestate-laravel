@@ -2,6 +2,7 @@
 
   .listing-top{
     position: relative;
+    height: 600px;
 
     &__img{
       position: absolute;
@@ -77,6 +78,72 @@
       &:hover{
         color: white;
         background: rgb(219, 105, 29);
+      }
+    }
+  }
+  .listing-info{
+    padding: 50px 0;
+    h1{
+      font-size: 1.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    &__details{
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+    }
+    &__details-text{
+      font-size: 1.2rem;
+      color: #7c8791;
+    }
+    &__agent-title{
+      font-size: .9rem;
+      display: block;
+      font-weight: 700;
+    }
+    &__agent-name{
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      display: block;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .listing-extras{
+    &__details{
+      h2{
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      h3{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      p{
+        line-height: 2;
+        margin-bottom: 2rem;
+      }
+      ul{
+        list-style: square;
+        li{
+          margin-bottom: 1rem
+        }
+      }
+    }
+    &__gallery{
+      h2{
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      img{
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
   }

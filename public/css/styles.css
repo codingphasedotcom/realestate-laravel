@@ -7189,6 +7189,7 @@ progress {
 
 .single-listing-page .listing-top {
   position: relative;
+  height: 600px;
 }
 .single-listing-page .listing-top__img {
   position: absolute;
@@ -7266,4 +7267,63 @@ progress {
 .single-listing-page .listing-top__form-button:hover {
   color: white;
   background: #db691d;
+}
+.single-listing-page .listing-info {
+  padding: 50px 0;
+}
+.single-listing-page .listing-info h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.single-listing-page .listing-info__details {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+}
+.single-listing-page .listing-info__details-text {
+  font-size: 1.2rem;
+  color: #7c8791;
+}
+.single-listing-page .listing-info__agent-title {
+  font-size: 0.9rem;
+  display: block;
+  font-weight: 700;
+}
+.single-listing-page .listing-info__agent-name {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.single-listing-page .listing-extras__details h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.single-listing-page .listing-extras__details h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.single-listing-page .listing-extras__details p {
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+.single-listing-page .listing-extras__details ul {
+  list-style: square;
+}
+.single-listing-page .listing-extras__details ul li {
+  margin-bottom: 1rem;
+}
+.single-listing-page .listing-extras__gallery h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.single-listing-page .listing-extras__gallery img {
+  width: 100%;
+  margin-bottom: 10px;
 }
