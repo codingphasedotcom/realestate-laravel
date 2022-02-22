@@ -20,9 +20,11 @@
         <div class="row">
           <div class="col-md-3">
             <div class="account__menu">
+              
+              <h3>Welcome Back, {{ Auth::user()->name }}</h3>
               <h2>Menu</h2>
-              <a href="/account/saved">Saved Listings</a>
-              <a href="/account/show-status">Listing Request Status</a>
+              <a href="{{route('account')}}">Saved Listings</a>
+              <a href="{{route('show-status')}}">Listing Request Status</a>
             </div>
           
           </div>

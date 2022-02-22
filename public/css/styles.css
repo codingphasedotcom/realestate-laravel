@@ -6869,6 +6869,10 @@ progress {
   color: #3366cc;
   text-decoration: none;
 }
+.header__account-link--anchor {
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
 
 .hero {
   padding: 0 50px;
