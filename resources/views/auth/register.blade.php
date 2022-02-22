@@ -1,4 +1,79 @@
-<x-guest-layout>
+
+
+
+
+@extends('layouts.main')
+@section('page-title', 'Register - Smith Realty')
+
+@section('content')
+<div class="auth-page auth-page--login">
+  <form method="POST" action="{{ route('register') }}" class="auth-page__form">
+    @csrf
+    <h3 class="auth-page__title">Register</h3>
+    <div class="auth-page__form-group">
+      <label for="name" class="auth-page__form-label">Name</label>
+      <input type="text" name="name" class="auth-page__form-input" value="{{old('name')}}">
+      @error('name')
+        <div class="error-sub-text">
+            {{$message}}
+        </div>
+      @enderror
+    </div>
+    <div class="auth-page__form-group">
+      <label for="email" class="auth-page__form-label">Email</label>
+      <input type="email" name="email" class="auth-page__form-input" value="{{old('email')}}">
+      @error('email')
+        <div class="error-sub-text">
+            {{$message}}
+        </div>
+      @enderror
+    </div>
+    <div class="auth-page__form-group">
+      <label for="password" class="auth-page__form-label">Password</label>
+      <input type="password" name="password" required autocomplete="current-password" class="auth-page__form-input">
+      @error('password')
+        <div class="error-sub-text">
+            {{$message}}
+        </div>
+      @enderror
+    </div>
+    <div class="auth-page__form-group">
+      <label for="password_confirmation" class="auth-page__form-label">Confirm Password</label>
+      <input type="password" name="password_confirmation" required autocomplete="current-password" class="auth-page__form-input">
+      @error('password_confirmation')
+        <div class="error-sub-text">
+            {{$message}}
+        </div>
+      @enderror
+    </div>
+    
+    <div class="auth-page__form-group">
+        <a href="{{ route('login') }}">
+            Already registered?
+        </a>
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    </div>
+    
+    
+    <div class="auth-page__form-group">
+      <button type="submit" class="auth-page__form-button">Register</button>
+    </div>
+    
+  </form>
+
+</div>
+@endsection
+
+
+
+
+
+
+
+
+
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -56,4 +131,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}
