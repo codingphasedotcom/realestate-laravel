@@ -13,14 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group([
+    'prefix' => 'admin',
+    'as' => 'admin.'
+], function() {
+    Route::get('/', function () {
+        return view('admin/dashboard');
+    })->name('dashboard');
+
+    Route::group([
+        'prefix' => 'listings',
+        'as' => 'listings.'
+    ], function(){
+        Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
+
+        Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
+
+        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+    });
 });
 
-// Home Page
-Route::get('/home', function () {
+
+
+Route::get('/', function () {
     return view('pages/home');
 });
+
+
 // Single listing 
 Route::get('/listing/{slug}/{id}', function () {
     return view('pages/single-listing');
@@ -28,27 +47,20 @@ Route::get('/listing/{slug}/{id}', function () {
 // Show All Listings
 Route::get('/{property_type}/{listing_type}/{city}', function () {
     return view('pages/listings');
-});
+})->name('listings');
 
-// User Login
-Route::get('/home/login', function () {
-    return view('pages/login');
-});
-// User Register
-Route::get('/home/register', function () {
-    return view('pages/register');
-});
+
 // User Saved Listings
-Route::get('/account/saved', function () {
+Route::get('/account', function () {
     return view('pages/saved-listings');
-});
+})->name('account');
 // User Showing Status
 Route::get('/account/show-status', function () {
     return view('pages/show-status');
-});
+})->name('show-status');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
+
+
 
 require __DIR__.'/auth.php';
