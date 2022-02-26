@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
+            $table->string('address');
+            $table->string('address2')->nullable();
+            $table->string('city');
+            $table->string('state');
+            $table->integer('zipcode')->unsigned();
+            $table->string('bedrooms')->default(0);
+            $table->string('bathrooms')->default(1);
+            $table->string('squarefootage')->default(100);
+            $table->longText('description')->nullable();
+            $table->text('slug');
             $table->timestamps();
         });
     }

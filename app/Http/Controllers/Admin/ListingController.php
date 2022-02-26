@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use App\Helper\Helper;
 
 class ListingController extends Controller
 {
@@ -36,7 +37,19 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $listing = new Listing();
+        $listing->address = $request->get('address');
+        $listing->address2 = $request->get('address2');
+        $listing->city = $request->get('city');
+        $listing->state = $request->get('state');
+        $listing->zipcode = $request->get('zipcode');
+        $listing->bedrooms = $request->get('bedrooms');
+        $listing->bathrooms = $request->get('bathrooms');
+        $listing->squarefootage = $request->get('squarefootage');
+        
+        $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
+        $listing->save();
+        return "success";
     }
 
     /**
