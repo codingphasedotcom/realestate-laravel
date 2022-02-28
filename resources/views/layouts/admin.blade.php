@@ -59,7 +59,7 @@
       }
     }
   </style>
-  {{-- <link rel="stylesheet" href="{{mix('/css/styles.css')}}"> --}}
+  <link rel="stylesheet" href="{{mix('/css/styles.css')}}">
   <script defer="defer" src="/dash/main.js"></script>
 </head>
 
@@ -255,6 +255,14 @@
       </div>
       <!-- ### $App Screen Content ### -->
       <main class="main-content bgc-grey-100">
+        @if(session()->has('success'))
+        <div class="alert alert-success" role="alert">{{session('success')}}</div>
+        @endif
+        @if(session()->has('error'))
+        <div class="alert alert-danger" role="alert">
+          {{session('error')}}
+        </div>
+        @endif
         @yield('content')
       </main><!-- ### $App Screen Footer ### -->
       <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2021 Designed by <a

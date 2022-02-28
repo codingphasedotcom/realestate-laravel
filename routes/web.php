@@ -31,7 +31,7 @@ Route::group([
 
         Route::post('/', [\App\Http\Controllers\Admin\ListingController::class, 'store'])->name('store');
 
-        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+        Route::get('/{slug}/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
     });
 });
 
