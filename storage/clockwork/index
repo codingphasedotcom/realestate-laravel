@@ -486,3 +486,7 @@
 1646333136-0311-50172859,1646333135.9694,GET,/admin/listings/create,"App\Http\Controllers\Admin\ListingController@create",200,235.73207855225,request
 1646333136-3105-2146620328,1646333136.2414,GET,/admin/listings/assets/static/images/logo.png,,404,284.6519947052,request
 1646333400-3971-2127943462,1646333400.3276,GET,/home/for_sale/south-beach,Closure,200,166.24593734741,request
+1646337143-9744-1722090301,1646337143.9038,GET,/home/for_sale/south-beach,Closure,200,152.95791625977,request
+1646337173-9750-1445915337,1646337173.9245,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,135.03813743591,request
+1646337184-9457-27008406,1646337184.8905,POST,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@store",302,202.68583297729,request
+1646337185-1774-165651511,1646337185.105,GET,/account,Closure,200,217.08512306213,request
