@@ -17,7 +17,7 @@ class ListingController extends Controller
      */
     public function index()
     {  
-        $listings = Listing::paginate(2);
+        $listings = Listing::paginate(5);
         return view('admin/listings/index', [
             'listings' => $listings
         ]);

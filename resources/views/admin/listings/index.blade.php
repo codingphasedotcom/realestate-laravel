@@ -22,8 +22,15 @@
               @foreach ($listings as $listing)
               <tr>
                 <th scope="row">{{$listing->id}}</th>
-                <td>{{$listing->address}} {{$listing->address2}}<br>
-                  {{$listing->city}}, {{$listing->state}} {{$listing->zipcode}}</td>
+                <td>
+                  <a href="{{route('admin.listings.edit', [
+                    'slug' => $listing->slug,
+                    'id' => $listing->id
+                  ])}}">
+                    {{$listing->address}} {{$listing->address2}}<br>
+                    {{$listing->city}}, {{$listing->state}} {{$listing->zipcode}}
+                  </a>
+                </td>
                 <td>Active</td>
               </tr>
               @endforeach
