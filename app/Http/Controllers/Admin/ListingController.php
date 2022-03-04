@@ -17,7 +17,7 @@ class ListingController extends Controller
      */
     public function index()
     {  
-        $listings = Listing::paginate(5);
+        $listings = Listing::where('user_id', auth()->user()->id)->paginate(5);
         return view('admin/listings/index', [
             'listings' => $listings
         ]);
@@ -30,6 +30,7 @@ class ListingController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Listing::class);
         return view('admin/listings/create');
     }
 
@@ -41,6 +42,7 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Listing::class);
         request()->validate([
             'address' => 'required',
             'address2' => 'required',
@@ -52,6 +54,7 @@ class ListingController extends Controller
         ]);
         
         $listing = new Listing();
+        $listing->user_id = auth()->user()->id;
         $listing->address = $request->get('address');
         $listing->address2 = $request->get('address2');
         $listing->city = $request->get('city');
@@ -60,7 +63,6 @@ class ListingController extends Controller
         $listing->bedrooms = $request->get('bedrooms');
         $listing->bathrooms = $request->get('bathrooms');
         $listing->squarefootage = $request->get('squarefootage');
-        
         $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
         $listing->save();
 
@@ -88,10 +90,12 @@ class ListingController extends Controller
      */
     public function edit($slug, $id)
     {
+        
         $listing = Listing::where([
             'id' => $id,
             'slug' => $slug
             ])->first();
+        $this->authorize('update', $listing);
         return view('admin/listings/edit', ['listing' => $listing]);
     }
 
@@ -104,6 +108,7 @@ class ListingController extends Controller
      */
     public function update(Request $request, $slug, $id)
     {
+        
         request()->validate([
             'address' => 'required',
             'address2' => 'required',
@@ -118,6 +123,7 @@ class ListingController extends Controller
             'id' => $id,
             'slug' => $slug
             ])->first();
+        $this->authorize('update', $listing);
         $listing->address = $request->get('address');
         $listing->address2 = $request->get('address2');
         $listing->city = $request->get('city');
@@ -126,7 +132,6 @@ class ListingController extends Controller
         $listing->bedrooms = $request->get('bedrooms');
         $listing->bathrooms = $request->get('bathrooms');
         $listing->squarefootage = $request->get('squarefootage');
-        
         $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
         $listing->save();
 
@@ -143,10 +148,10 @@ class ListingController extends Controller
      */
     public function destroy($slug, $id)
     {
-         
-    $listing = Listing::find($id);
-    $listing->delete();
+        $listing = Listing::find($id);
+        $this->authorize('delete', $listing);
+        $listing->delete();
 
-    return redirect("/admin/listings")->with('success', 'Listing Has Been Delete Successfully');
+        return redirect("/admin/listings")->with('success', 'Listing Has Been Delete Successfully');
     }
 }
