@@ -106,13 +106,11 @@
               @enderror</div>
           </div>
           <div class="row">
-            <div class="mb-3 col-md-6">
+            <div class="mb-3 col-md-12">
               <h3>Details</h3>
               <label class="form-label" for="description">Description</label> <textarea
                 class="form-control" name="description" id="description" placeholder="ex: talk about property"
-                autocomplete="off" >
-                  {{old('description', $listing->description)}}
-                </textarea>
+                autocomplete="off" >{{old('description', $listing->description)}}</textarea>
                 @error('description')
                 <div class="error-sub-text">
                     {{$message}}
