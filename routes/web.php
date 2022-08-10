@@ -61,9 +61,9 @@ Route::get('/', function () {
 
 
 // Single listing 
-Route::get('/listing/{slug}/{id}', function () {
-    return view('pages/single-listing');
-});
+
+Route::get('/listing/{slug}/{id}', [\App\Http\Controllers\Front\ListingController::class, 'show'])->name('frontlisting.show');
+
 // Show All Listings
 Route::get('/{property_type}/{listing_type}/{city}', function () {
     return view('pages/listings');
