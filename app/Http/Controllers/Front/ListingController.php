@@ -50,6 +50,7 @@ class ListingController extends Controller
         // ->whereBetween("price", [$min_price, $max_price])
         ->get();
         return $listings;
+        // return view('pages/listings');
     }
 
     /**
